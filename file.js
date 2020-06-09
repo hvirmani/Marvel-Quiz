@@ -33,6 +33,14 @@
                 answer: ['It drains his suit to 0% power', 'It supercharges his armor up to 400%', 'It stunts him', 'It scrambles J.A.R.V.I.S voice'],
                 correct: 2
         }, {
+                question: "Before Thanos offed Heimdall, where did he send Hulk?",
+                answer: ['Wakanda', 'Valhalla', 'Calcutta', 'New York'],
+                correct: 4
+        },{
+                question: "What do the Avengers get at the final post-credit scene in the first film?",
+                answer: ['Falafel', 'Subs', 'Shawarma', 'Donair'],
+                correct: 3
+        },{
                 question: "Which Avenger was overseeing the Tesseract at the start of the first film?",
                 answer: ['Loki', 'The Falcon', 'The Winter Soldier', 'Hawkeye'],
                 correct: 4
@@ -71,7 +79,7 @@
         }, {
                 question: "What villain from a previous movie returns in Avengers: Infinity War?",
                 answer: ['Ebony Maw', 'The Kingpin', 'Loki', 'Red Skull'],
-                correct: 34        }, ];
+                correct: 4        }, ];
         var i = 0;
         // Display some data from the object:
         $(document).ready(function () {
@@ -79,7 +87,7 @@
             ++i;
 
             for (var j = 0; j < 4; j++) {
-                $(".ask").text("Question " + (i));
+                $(".num").text("Question " + (i));
                 var y = j + 1;
 
                 $("." + String.fromCharCode('a'.charCodeAt(0) + j)).text(arr[i - 1].answer[j]);
@@ -93,7 +101,7 @@
                     ++i;
 
                     for (var j = 0; j < 4; j++) {
-                        $(".ask").text("Question " + (i) + " of 5");
+                        $(".num").text("Question " + i);
                         var y = j + 1;
                         $("." + String.fromCharCode('a'.charCodeAt(0) + j)).text(arr[i - 1].answer[j]);
                         $("." + j).attr("id", "");
@@ -101,7 +109,8 @@
                     $("." + arr[i - 1].correct).attr("id", "correct");
                     $(".result").text("");
                 } else {
-                    alert(98);
+                    $(".main").hide(2000);
+                    $(".hi").text("Congrats you have completed the quiz");
                 }
             });
             $(".active").click(function () {
