@@ -1,13 +1,77 @@
         var k = 0;
         var arr = [{
-            question: "Tony stark is more famus known as?",
-            answer: ['Batman', 'IronMan', 'Superman', 'Captain'],
-            correct: 3
+                question: "Name the Maximoff Twins!",
+                answer: ['Michael and Wilma', 'Freya and Anton', 'Wanda and Pietro', 'Fiedka and Freida'],
+                correct: 3
         }, {
-            question: "Tony stark is2 more famus known as?",
-            answer: ['Batdman', 'IroenMan', 'Sueperman', 'Capstain'],
-            correct: 1
-        }];
+                question: "Which Avenger is Wanda Maximoff?",
+                answer: ['The Black Widow', 'The Scarlet Witch', 'Jubilee', 'The Phonix'],
+                correct:2 
+        },
+            {
+                question: "What is the alter ego of Pietro Maximoff?",
+                answer: ['Quicksilver', 'Night Crawler', 'The Flash', 'Archangel'],
+                correct: 1
+        }, {
+                question: "Who is the only Avenger who is able to budge Thor's hammer?",
+                answer: ['The Hulk', 'IronMan', 'Spider-Man', 'Captain America'],
+                correct: 4
+        }, {
+                question: "Who does Captain America call Earth best defender?",
+                answer: ['The Hulk', 'IronMan', 'Thor', 'Black Widow'],
+                correct: 2
+        }, {
+                question: "What does Thanos use to accomplish his plan?",
+                answer: ['The Soul Stone', 'The Tesseract', 'The Infinity Gauntlet', 'The Heart Stone'],
+                correct: 3
+        }, {
+                question: "Which Avengers don't actually possess powers or physical alterations?",
+                answer: ['Black Widow and Hawkeye', 'Ant-Man and Spider-Man', 'Black Panther and The Falcon', 'Iron Man and Black Widow'],
+                correct: 1
+        }, {
+                question: "When Iron Man is struck by Thor's lightning what happens?",
+                answer: ['It drains his suit to 0% power', 'It supercharges his armor up to 400%', 'It stunts him', 'It scrambles J.A.R.V.I.S voice'],
+                correct: 2
+        }, {
+                question: "Which Avenger was overseeing the Tesseract at the start of the first film?",
+                answer: ['Loki', 'The Falcon', 'The Winter Soldier', 'Hawkeye'],
+                correct: 4
+        }, {
+                question: "Where is Captain America when he is first shown in the films?",
+                answer: ['Back in time', 'A gym', 'Riding his bike', 'Stuck in ice'],
+                correct: 2
+        }, {
+                question: "What is the name of Hawkeye's wife?",
+                answer: ['Dana', 'Laura', 'Suzie', 'Madison'],
+                correct: 2
+        }, {
+                question: "Who has a set of collector edition Captain America trading cards?",
+                answer: ['Phil Coulson', 'The Collector', 'Nick Fury', 'Paul Bettany'],
+                correct: 1
+        }, {
+                question: "Who goes to retrieve Bruce Banner from his isolation?",
+                answer: ['Natasha Romanoff', 'Tony Stark', 'Steve Rogers', 'Wanda Maximoff'],
+                correct: 1
+        }, {
+                question: "At the beginning of Avengers: Age of Ultron, who calls Tony out for swearing?",
+                answer: ['Hawkeye', 'Nick Fury', 'Bruce Banner', 'Captain America'],
+                correct: 4
+        }, {
+                question: "Who is not a member of Thanos' Black Order in the films?",
+                answer: ['Proxima Midnight', 'Corvus Glaive', 'Supergiant', 'Ebony Maw'],
+                correct: 3
+        }, {
+                question: "What is Stan Lee doing in Avengers: Infinity War?",
+                answer: ['Catching a ball at Dodgers stadium', 'Driving a bus', 'Opening a door for Avengers', 'Yelling at the Avengers'],
+                correct: 2
+        }, {
+                question: "Who in Wakanda was the first person to dissolve in Avengers: Infinity War?",
+                answer: ['Bucky', 'Vision', 'Spider-Man', 'Scarlett Witch'],
+                correct: 1
+        }, {
+                question: "What villain from a previous movie returns in Avengers: Infinity War?",
+                answer: ['Ebony Maw', 'The Kingpin', 'Loki', 'Red Skull'],
+                correct: 34        }, ];
         var i = 0;
         // Display some data from the object:
         $(document).ready(function () {
@@ -15,7 +79,7 @@
             ++i;
 
             for (var j = 0; j < 4; j++) {
-                $(".ask").text("Question " + (i) + " of 5");
+                $(".ask").text("Question " + (i));
                 var y = j + 1;
 
                 $("." + String.fromCharCode('a'.charCodeAt(0) + j)).text(arr[i - 1].answer[j]);
