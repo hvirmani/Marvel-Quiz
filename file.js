@@ -104,12 +104,13 @@
                         $(".num").text("Question " + i);
                         var y = j + 1;
                         $("." + String.fromCharCode('a'.charCodeAt(0) + j)).text(arr[i - 1].answer[j]);
-                        $("." + j).attr("id", "");
+                        $("." +y).attr("id", "");
                     }
                     $("." + arr[i - 1].correct).attr("id", "correct");
                     $(".result").text("");
                 } else {
                     $(".main").hide(2000);
+                    $(".hi").css("display","block");
                     $(".hi").text("Congrats you have completed the quiz");
                 }
             });
