@@ -10,7 +10,7 @@
                 answer: ['The Black Widow', 'The Scarlet Witch', 'Jubilee', 'The Phonix'],
                 correct: 2,
                 result: 0,
-                know:0,
+                count:0,
         },
             {
                 question: "What is the alter ego of Pietro Maximoff?",
@@ -151,7 +151,7 @@
                     for (var j = 0; j < i; j++) {
                         if (arr[j].result === 1)
                             res++;
-                        arr[0].know=res*5;
+                        arr[0].count=res*5;
                     }
                     typeWriter();
                     $(".main").hide(2000);
@@ -180,7 +180,7 @@
         var l = 0;
         var speed = 80;
         function typeWriter() {
-            if (l <= arr[0].know) {
+            if (l <= arr[0].count) {
                 document.getElementById("demo").innerHTML = l+"%";
                 l++;
                 setTimeout(typeWriter, speed);
